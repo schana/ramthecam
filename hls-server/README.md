@@ -6,7 +6,10 @@ This module is responsible for building and configuring an nginx server complete
 
 1. Go to the `build` directory
 1. `docker build -t modulebuild .`
-1. `docker cp modulebuild:/etc/nginx/modules/ngx_rtmp_module.so ..`
+1. Copy the module to the local filesystem
+1. `docker create -ti --name copyslave modulebuild bash`
+1. `docker cp copyslave:/etc/nginx/modules/ngx_rtmp_module.so ..`
+1. `docker rm -fv copyslave`
 
 ## Run instructions
 
