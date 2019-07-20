@@ -23,4 +23,4 @@ EXPOSE 1935
 STOPSIGNAL SIGTERM
 CMD ["nginx", "-g", "daemon off;"]
 
-# In Streamlabs OBS, use a custom stream to rtmp://<server address>:1935/live with a key of "test"
+# In Streamlabs OBS, use a custom stream to rtmp://<server address>:1935/live with a key of "stream"

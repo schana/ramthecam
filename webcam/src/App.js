@@ -4,10 +4,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <ReactPlayer url="http://localhost/hls/test.m3u8" playing controls />
-      </header>
+    <div className='player-wrapper'>
+      <ReactPlayer
+        className='react-player'
+        width='100%'
+        height='100%'
+        url="http://localhost:80/hls/stream.m3u8"
+        playing
+        controls
+      />
     </div>
   );
 }
